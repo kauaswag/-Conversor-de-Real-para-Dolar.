@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Conversor de Dólar</h1>
+    <input placeholder="Valor em Reais" type="number" />
+    <button onclick="converter()">Converter</button>
+  </body>
+
+  <script>
+    const valorReal = document.querySelector("input"); //document.querySelector = procurar dados no HTML
+    document.querySelector("h1").style.color = "blue"; //alterar estilo do h1
+    document.querySelector("body").style.backgroundColor = "black";
+
+    function converter() {
+      const ValorConvertido = valorReal.value / 5.38; //valor do dolar em 01/2026
+
+      if (ValorConvertido == 1) {
+        alert(`O valor em dólar é ${ValorConvertido.toFixed(2)} Dolar`);
+      } else alert(`O valor em dólar é ${ValorConvertido.toFixed(2)} Dolares`); //toFixed(2) = limitar o numero de casas decimais
+    }
+  </script>
+</html>
